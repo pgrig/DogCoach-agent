@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  dogcoach:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    restart: unless-stopped 
